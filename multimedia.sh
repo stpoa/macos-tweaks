@@ -6,6 +6,10 @@
 echo "• Installing Browsers..."
 brew cask install google-chrome
 
+# messenger
+echo "• Installing Messengers..."
+brew cask install caprine
+
 # tidal
 echo "• Installing Music Players..."
 brew cask install tidal
