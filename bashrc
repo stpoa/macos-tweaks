@@ -9,6 +9,7 @@ alias c='clear'
 alias q='exit'
 alias l='ls'
 alias v='vim'
+alias t='tmux'
 
 # Tweaks
 shopt -s autocd
