@@ -17,6 +17,12 @@ brew install bash
 echo /usr/local/bin/bash|sudo tee -a /etc/shells
 chsh -s /usr/local/bin/bash
 
-git clone https://github.com/stpoa/.bash /tmp/stpoa.bash
-cp -f /tmp/stpoa.bash/* ~/
+cd
+rm .bash_profile .bashrc .vimrc .tmux.conf .bash-powerline.sh .hushlogin
+ln -s Github/macos-tweaks/bash_profile .bash_profile
+ln -s Github/macos-tweaks/bashrc .bashrc
+ln -s Github/macos-tweaks/vimrc .vimrc
+ln -s Github/macos-tweaks/tmux.conf .tmux.conf
+ln -s Github/macos-tweaks/bash-powerline.sh .bash-powerline.sh
+touch .hushlogin
 

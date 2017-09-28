@@ -2,7 +2,7 @@
 export PATH=/usr/sbin:/sbin:/usr/local/bin:$PATH
 
 # Theme
-source ~/.bash/bash-powerline.sh
+source ~/.bash-powerline.sh
 
 # Aliases
 alias c='clear'
