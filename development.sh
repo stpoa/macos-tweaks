@@ -27,3 +27,6 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 brew install reattach-to-user-namespace # clipboard fix
 echo 'set-option -g default-command "reattach-to-user-namespace -l bash"' >> ~/.tmux.conf
 
+# slack
+brew cask install slack
+
