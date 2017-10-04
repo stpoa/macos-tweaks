@@ -42,5 +42,5 @@
   highlight EndOfBuffer ctermfg=black " color tildas
 
 " Startup 
-  autocmd vimenter * NERDTree
+  "autocmd vimenter * NERDTree
 
