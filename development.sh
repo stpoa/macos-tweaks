@@ -26,6 +26,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 brew install reattach-to-user-namespace # clipboard fix
 echo 'set-option -g default-command "reattach-to-user-namespace -l bash"' >> ~/.tmux.conf
+# autocomplete
+brew install cmake
+~/.vim/plugged/YouCompleteMe/install.py --tern-completer
+npm install --global tern
 
 # slack
 brew cask install slack

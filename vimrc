@@ -5,6 +5,8 @@
   Plug 'darfink/vim-plist'
   Plug 'tomlion/vim-solidity'
   Plug 'w0rp/ale'
+  Plug 'Valloric/YouCompleteMe'
+  Plug 'ternjs/tern_for_vim'
 
   " UI
   Plug 'airblade/vim-gitgutter'
