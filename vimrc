@@ -11,6 +11,7 @@
   " UI
   Plug 'airblade/vim-gitgutter'
   Plug 'altercation/vim-colors-solarized'
+  Plug 'scrooloose/nerdtree'
 
   call plug#end()
 
@@ -39,4 +40,7 @@
 
   set number
   highlight EndOfBuffer ctermfg=black " color tildas
+
+" Startup 
+  "autocmd vimenter * NERDTree
 
