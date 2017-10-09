@@ -43,4 +43,4 @@
 
 " Startup 
   "autocmd vimenter * NERDTree
-
+  autocmd CompleteDone * pclose
