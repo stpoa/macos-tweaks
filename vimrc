@@ -39,6 +39,7 @@
   colorscheme solarized
 
   set number
+  set colorcolumn=80
   highlight EndOfBuffer ctermfg=black " color tildas
 
 " Startup 
