@@ -16,3 +16,6 @@ brew cask
 brew tap caskroom/versions
 brew tap buo/cask-upgrade
 
+# mas (App store automation)
+brew install mas
+
