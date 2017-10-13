@@ -14,3 +14,17 @@ alias t='tmux'
 # Tweaks
 shopt -s autocd
 
+# Functions
+function day {
+  # Terminal theme
+  defaults write com.apple.Terminal "Startup Window Settings" -string "Solarized Light"
+  # Vim theme
+  sed -i -e 's/set background=dark/set background=light/g' .vimrc
+}
+function night {
+  # Terminal theme
+  defaults write com.apple.Terminal "Startup Window Settings" -string "Solarized Dark"
+  # Vim theme
+  sed -i -e 's/set background=light/set background=dark/g' .vimrc
+}
+
