@@ -7,6 +7,7 @@
   Plug 'w0rp/ale'
   Plug 'Valloric/YouCompleteMe'
   Plug 'ternjs/tern_for_vim'
+  Plug 'mxw/vim-jsx'
 
   " UI
   Plug 'airblade/vim-gitgutter'
@@ -35,7 +36,7 @@
 
 " UI
   syntax enable
-  set background=dark
+  set background=light
   colorscheme solarized
 
   set number
