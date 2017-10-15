@@ -40,6 +40,13 @@
   colorscheme solarized
 
   set number
+  set number relativenumber
+  augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  augroup END
+
   set colorcolumn=80
   highlight EndOfBuffer ctermfg=black " color tildas
 
