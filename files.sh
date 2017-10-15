@@ -10,3 +10,6 @@ echo "• Making Directories..."
 mkdir ~/Github
 mkdir ~/Bitbucket
 
+echo "• Making Symbolic links..."
+cd
+ln -s "Library/Mobile Documents/com~apple~CloudDocs" iCloud
