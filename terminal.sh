@@ -5,10 +5,16 @@
 
 # Theme
 echo "• Installing terminal themes"
-git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git /tmp/solarized
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git \
+  /tmp/solarized
 open /tmp/solarized/Solarized\ Dark.terminal
 open /tmp/solarized/Solarized\ Light.terminal
-defaults write com.apple.Terminal "Startup Window Settings" -string "Solarized Dark"
+defaults write com.apple.Terminal "Startup Window Settings" \
+  -string "Solarized Dark"
+deffults write com.apple.Terminal "Startup Window Settings" \
+  -string "Solarized Light"
+defaults write "com.apple.Terminal.Window Settings.Solarized Dark" "CommandString" \
+  -string "tmux"
 
 
 # Bash
