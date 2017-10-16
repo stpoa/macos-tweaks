@@ -13,9 +13,6 @@ defaults write com.apple.Terminal "Startup Window Settings" \
   -string "Solarized Dark"
 deffults write com.apple.Terminal "Startup Window Settings" \
   -string "Solarized Light"
-defaults write "com.apple.Terminal.Window Settings.Solarized Dark" "CommandString" \
-  -string "tmux"
-
 
 # Bash
 echo "• Installing new Bash version"
