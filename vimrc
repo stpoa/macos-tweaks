@@ -8,6 +8,7 @@
   Plug 'Valloric/YouCompleteMe'
   Plug 'ternjs/tern_for_vim'
   Plug 'mxw/vim-jsx'
+  Plug 'jiangmiao/auto-pairs'
 
   " UI
   Plug 'airblade/vim-gitgutter'
@@ -41,6 +42,8 @@
 
   set number
   set number relativenumber
+  set cursorcolumn
+  set cursorline
   augroup numbertoggle
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber

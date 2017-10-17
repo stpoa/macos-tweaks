@@ -4,6 +4,9 @@ export PATH=/usr/sbin:/sbin:/usr/local/bin:$PATH
 # Theme
 source ~/.bash-powerline.sh
 
+# Relod tmux config
+tmux source-file ~/.tmux.conf
+
 # Aliases
 alias c='clear'
 alias q='exit'
