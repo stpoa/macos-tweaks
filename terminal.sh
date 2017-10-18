@@ -20,6 +20,10 @@ brew install bash
 echo /usr/local/bin/bash|sudo tee -a /etc/shells
 chsh -s /usr/local/bin/bash
 
+# Autocomplete
+brew install bash-completion
+brew tap homebrew/completions
+
 cd
 rm .bash_profile .bashrc .vimrc .tmux.conf .bash-powerline.sh .hushlogin
 ln -s Github/macos-tweaks/bash_profile .bash_profile

@@ -17,6 +17,11 @@ alias t='tmux'
 # Tweaks
 shopt -s autocd
 
+# Autocomplete
+if [ -f $(brew --prefix)/etc/bash_completion  ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 # Functions
 function day {
   # Terminal theme
