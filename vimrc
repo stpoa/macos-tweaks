@@ -9,6 +9,7 @@
   Plug 'ternjs/tern_for_vim'
   Plug 'mxw/vim-jsx'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'djoshea/vim-autoread'
 
   " UI
   Plug 'airblade/vim-gitgutter'
