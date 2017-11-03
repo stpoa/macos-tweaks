@@ -31,6 +31,9 @@ brew install cmake
 ~/.vim/plugged/YouCompleteMe/install.py --tern-completer
 npm install --global tern
 
+# tunnel local ports to public URLs
+brew cask install ngrok
+
 # slack
 brew cask install slack
 
