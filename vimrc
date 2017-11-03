@@ -14,6 +14,10 @@
   " UI
   Plug 'airblade/vim-gitgutter'
   Plug 'altercation/vim-colors-solarized'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
+  " Utilities
   Plug 'scrooloose/nerdtree'
 
   call plug#end()
