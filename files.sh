@@ -5,6 +5,7 @@
 echo "• Installing Storage Applications..."
 brew cask install megasync
 brew cask install keka
+brew install tree
 
 echo "• Making Directories..."
 mkdir ~/Github
