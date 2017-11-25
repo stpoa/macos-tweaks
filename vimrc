@@ -1,63 +1,82 @@
-" Plugins
-  call plug#begin('~/.vim/plugged')
+" disable backup and swap files
+  set nobackup
+  set nowritebackup
+  set noswapfile
 
-  " Syntax
-  Plug 'darfink/vim-plist'
-  Plug 'tomlion/vim-solidity'
-  Plug 'w0rp/ale'
-  Plug 'Valloric/YouCompleteMe'
-  Plug 'ternjs/tern_for_vim'
-  Plug 'mxw/vim-jsx'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'djoshea/vim-autoread'
-
-  " UI
-  Plug 'airblade/vim-gitgutter'
-  Plug 'altercation/vim-colors-solarized'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-
-  " Utilities
-  Plug 'scrooloose/nerdtree'
-
-  call plug#end()
-
-" Clipboard
+" clipboard
   set clipboard=unnamed
 
-" Syntax
+" syntax
 
-  " Default
-  set backspace=2
-  set shiftwidth=2
-  set tabstop=2
-  set expandtab
+  " default
+  set backspace=2 shiftwidth=2 tabstop=2 expandtab
 
-  " JavaScript
-  let g:ale_linters = {'javascript': ['standard']}
+  " solidity
+  autocmd filetype solidity setlocal ts=4 sw=4 expandtab
+  autocmd filetype solidity set colorcolumn=100
+  let g:syntastic_javascript_checkers=['jscs','standard']
+  let g:syntastic_solidity_checkers=['solc', 'solhint', 'solium']
+  let g:syntastic_javascript_checkers=['standard']
+  let g:syntastic_javascript_standard_exec = 'semistandard'
 
-  " Solidity
-  autocmd Filetype solidity setlocal ts=4 sw=4 expandtab
+" keyboard
+  nmap ; :
+  noremap ;; ;
 
+  ino " ""<left>
+  ino ' ''<left>
+  ino ( ()<left>
+  ino [ []<left>
+  ino { {}<left>
+  ino {<CR> {<CR>}<ESC>O
+  ino {;<CR> {<CR>};<ESC>O
 
-" UI
+" ui
   syntax enable
-  set background=light
-  colorscheme solarized
+  set background=dark
+  colorscheme alduin
+  let g:airline_theme='angr'
+  set nonumber
 
-  set number
-  set number relativenumber
-  set cursorcolumn
-  set cursorline
-  augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  " Highlight trailing whitespaces
+  highlight TrailingWhitespace ctermbg=red guibg=red
+  match TrailingWhitespace /\s\+$/
+
+  augroup HighlightTrailingWhitespace
+    autocmd BufEnter * match TrailingWhitespace /\s\+$/
+    autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
+    autocmd WinEnter * match TrailingWhitespace /\s\+$/
+    autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
+    autocmd InsertLeave * match TrailingWhitespace /\s\+$/
+    autocmd WinLeave * call clearmatches()
+    autocmd BufWinLeave * call clearmatches()
+    autocmd BufLeave * call clearmatches()
   augroup END
 
-  set colorcolumn=80
-  highlight EndOfBuffer ctermfg=black " color tildas
+" keyboard
+  nmap ; :
+  noremap ;; ;
 
-" Startup 
-  "autocmd vimenter * NERDTree
-  autocmd CompleteDone * pclose
+  set colorcolumn=80
+  highlight endofbuffer ctermfg=black " color tildas
+  set noshowmode
+
+" startup
+  autocmd completedone * pclose
+
+" plugins
+call plug#begin('~/.vim/plugged')
+
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'tomlion/vim-solidity'
+  "Plug 'w0rp/ale'
+  Plug 'valloric/youcompleteme'
+  Plug 'scrooloose/syntastic'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'alessandroyorba/alduin'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'kien/ctrlp.vim'
+
+cutocmd CompleteDone * pclose

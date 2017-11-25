@@ -1,5 +1,6 @@
 # Path
-export PATH=/usr/sbin:/sbin:/usr/local/bin:$PATH
+export PATH="/usr/sbin:/sbin:/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Theme
 source ~/.bash-powerline.sh
@@ -11,8 +12,12 @@ tmux source-file ~/.tmux.conf
 alias c='clear'
 alias q='exit'
 alias l='ls'
-alias v='vim'
+alias vim='nvim'
+alias v='nvim'
 alias t='tmux'
+alias n='npm'
+alias g='git'
+alias 'g-s'='git status'
 
 # Tweaks
 shopt -s autocd
